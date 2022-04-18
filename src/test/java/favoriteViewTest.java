@@ -16,9 +16,6 @@ public class favoriteViewTest extends baseTest{
     public void favoriteViewTesting(){
         favoriteViewPage favoriteView = new favoriteViewPage(driver);
         favoriteView.checkingFavoriteViewList();
-        String fview = driver.findElement(favView).getText();
-        String Desired = driver.findElement(desiredView).getText();
-        Assert.assertEquals(fview,Desired);
 
     }
 }

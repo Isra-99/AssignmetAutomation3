@@ -10,7 +10,7 @@ import steps.signInPage;
 
 import java.util.List;
 
-public class editViewTest extends preTest{
+public class editViewTest extends baseTest{
     @Test
     public void editViewTesting() {
 

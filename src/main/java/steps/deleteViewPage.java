@@ -23,7 +23,7 @@ public class deleteViewPage {
         dataCatalog.openColumnDictionary();
         actionsOnViewSettingsPage view = new actionsOnViewSettingsPage(driver);
         view.openViewDropDown();
-        view.selectDesiredView();
+        view.selectDesiredViewToDelete();
         view.clickViewSettingsDropDown();
         actionsOnDeleteViewPage delete = new actionsOnDeleteViewPage(driver);
         delete.clickDeleteView();

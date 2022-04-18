@@ -23,7 +23,7 @@ public class favoriteViewPage {
         dataCatalog.openColumnDictionary();
         actionsOnViewSettingsPage view = new actionsOnViewSettingsPage(driver);
         view.openViewDropDown();
-        view.selectDesiredView();
+        view.selectDesiredViewToFavorite();
         actionsOnFavoriteViewPage favorite = new actionsOnFavoriteViewPage(driver);
         favorite.clickingFavoriteButton();
         view.openViewDropDown();
