@@ -1,11 +1,10 @@
 package steps;
 
-import actions.actionsOnWebsite;
+import actions.actionsOnDataCatalogDropDown;
+import actions.actionsOnSignInPage;
 import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
-
-import static components.signIinLocators.*;
 
 public class signInPage {
     public WebDriver driver;
@@ -13,10 +12,14 @@ public class signInPage {
         this.driver = d;
     }
     public void userSigningIn(){
-        actionsOnWebsite actionsOnWebsite = new actionsOnWebsite(driver);
+        actionsOnSignInPage  actionsOnWebsite = new actionsOnSignInPage(driver);
         actionsOnWebsite.enterCredentials();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         actionsOnWebsite.clickSignInButton();
+        actionsOnWebsite.clickUpgradeNowButton();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        actionsOnDataCatalogDropDown dataCatalog = new actionsOnDataCatalogDropDown(driver);
+        dataCatalog.openDataCataLog();
+        dataCatalog.openColumnDictionary();
     }
 }

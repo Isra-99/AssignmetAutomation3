@@ -1,24 +1,23 @@
 package actions;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
+import static components.sawsUpdateLocator.upgradeNowButton;
 import static components.signIinLocators.*;
 import static constants.constants.emailId;
 import static constants.constants.password;
 
-public class actionsOnWebsite {
+public class actionsOnSignInPage {
     WebDriver driver;
-    public  actionsOnWebsite (WebDriver d)
-    {
+
+    public actionsOnSignInPage(WebDriver d) {
         this.driver = d;
+
     }
+
 
     public void enterCredentials (){
         ///Entering Email
@@ -55,5 +54,9 @@ public class actionsOnWebsite {
                 break;
             }
         }
+
+    }
+    public void clickUpgradeNowButton(){
+        driver.findElement(upgradeNowButton).click();
     }
 }
