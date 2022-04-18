@@ -8,5 +8,5 @@ public class constants {
     public WebDriver driver;
     public static String emailId = "testautomation@dvsum.com";
     public static String password = "1@Qwerty";
-
+    public static String editedViewName = "MY_FINAL_VIEW";
 }

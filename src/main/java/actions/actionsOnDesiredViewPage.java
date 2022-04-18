@@ -11,13 +11,14 @@ import java.util.List;
 import java.util.WeakHashMap;
 
 import static components.viewLocators.*;
+import static constants.constants.editedViewName;
 
 public class actionsOnDesiredViewPage {
     public WebDriver driver;
     public actionsOnDesiredViewPage(WebDriver d ){this.driver = d;}
     public void editViewName(){
         driver.findElement(viewNameField).sendKeys(Keys.CONTROL,"a",Keys.DELETE);
-        driver.findElement(viewNameField).sendKeys("MY_FINAL_VIEW");
+        driver.findElement(viewNameField).sendKeys(editedViewName);
     }
     public void selectingDesiredItems(){
         Actions actions =  new Actions(driver);

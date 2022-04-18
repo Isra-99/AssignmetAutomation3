@@ -10,13 +10,16 @@ import steps.signInPage;
 
 import java.util.List;
 
+import static components.viewLocators.viewNameField;
+
 public class editViewTest extends baseTest{
     @Test
     public void editViewTesting() {
 
         EditViewPage viewPage = new EditViewPage(driver);
         viewPage.selectingAndEditingView();
-
+        String newViewName = driver.findElement(viewNameField).getText();
+        Assert.assertEquals("MY_FINAL_VIEW",newViewName);
 
 
 

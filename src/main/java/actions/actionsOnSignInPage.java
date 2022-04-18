@@ -45,7 +45,7 @@ public class actionsOnSignInPage {
     }
     public void clickSignInButton(){
 
-        List<WebElement> l3 = driver.findElements(passwordField);
+        List<WebElement> l3 = driver.findElements(signInButton);
         int size3  = l3.size();
         for (int i =0;i<size3;i++){
             int x = l3.get(i).getLocation().getX();
