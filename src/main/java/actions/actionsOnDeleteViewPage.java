@@ -11,8 +11,6 @@ public class actionsOnDeleteViewPage {
         driver.findElement(deleteViewButton).click();
     }
     public void clickOkToDelete(){
-        //driver.switchTo().frame(driver.findElement(iframe));
         driver.findElement(okButton).click();
-        //driver.switchTo().parentFrame();
     }
 }

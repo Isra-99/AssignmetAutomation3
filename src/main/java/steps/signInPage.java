@@ -2,6 +2,7 @@ package steps;
 
 import actions.actionsOnDataCatalogDropDown;
 import actions.actionsOnSignInPage;
+import actions.actionsOnViewSettingsPage;
 import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -21,5 +22,6 @@ public class signInPage {
         actionsOnDataCatalogDropDown dataCatalog = new actionsOnDataCatalogDropDown(driver);
         dataCatalog.openDataCataLog();
         dataCatalog.openColumnDictionary();
+
     }
 }

@@ -4,6 +4,9 @@
         <classes>
             <class name="baseTest"/>
             <class name="editViewTest"/>
+            <class name="favoriteViewTest"/>
+            <class name="deleteTest"/>
+
 
         </classes>
     </test>

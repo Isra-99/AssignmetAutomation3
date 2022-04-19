@@ -11,9 +11,7 @@ import static components.viewSettingsDropDownLocaotors.viewDropDown;
 public class actionsOnViewSettingsPage {
     public WebDriver driver;
     public actionsOnViewSettingsPage(WebDriver d){this.driver =d;}
-    public void selectDesiredViewToEdit(){
-        driver.findElement(desiredViewEdit).click();
-    }
+    public void selectDesiredViewToEdit(){driver.findElement(desiredViewEdit).click();}
     public void selectDesiredViewToFavorite(){
         driver.findElement(desiredViewFavorite).click();
     }
