@@ -15,10 +15,8 @@ public class signInPage {
     public void userSigningIn(){
         actionsOnSignInPage  actionsOnWebsite = new actionsOnSignInPage(driver);
         actionsOnWebsite.enterCredentials();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         actionsOnWebsite.clickSignInButton();
         actionsOnWebsite.clickUpgradeNowButton();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         actionsOnDataCatalogDropDown dataCatalog = new actionsOnDataCatalogDropDown(driver);
         dataCatalog.openDataCataLog();
         dataCatalog.openColumnDictionary();

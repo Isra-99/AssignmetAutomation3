@@ -1,34 +1,34 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import steps.EditViewPage;
-import steps.signInPage;
+import utils.assertionOnColumn;
+import utils.editedViewNameAssertion;
 
-import java.util.List;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
-import static components.viewLocators.specifyDropDown;
 import static components.viewLocators.viewNameField;
-import static constants.constants.editedViewName;
 
 public class editViewTest extends baseTest{
-    SoftAssert softAssert = new SoftAssert();
     @Test
     public void editViewTesting() {
-
         EditViewPage viewPage = new EditViewPage(driver);
-        viewPage.selectingAndEditingView();
-        String newViewName = driver.findElement(viewNameField).getText();
-        softAssert.assertEquals(editedViewName,newViewName);
-        Select dropDownSpecifySelect = new Select(driver.findElement(specifyDropDown));
-        dropDownSpecifySelect.selectByIndex(1);
-        String criteria  = dropDownSpecifySelect.getFirstSelectedOption().getText();
-        System.out.println(criteria);
-        softAssert.assertEquals("Analysis Type",criteria);
+        viewPage.selectingView();
+        ArrayList<String> selectedColumns = (viewPage.editingView());
+        System.out.println("Columns selected"+selectedColumns);
+        editedViewNameAssertion editedViewNameAssertion = new editedViewNameAssertion(driver);
+        String newName  = editedViewNameAssertion.editedName();
+        Assert.assertEquals(newName,"THe_FINAL_VIEW");
+        assertionOnColumn assertionOnColumn = new assertionOnColumn(driver);
+        ArrayList<String> actualSelectedColumns = assertionOnColumn.checkingColumns(selectedColumns);
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(actualSelectedColumns,selectedColumns);
+
+
 
     }
 }

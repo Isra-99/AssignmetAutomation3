@@ -19,7 +19,7 @@ public class favoriteViewPage {
         view.clickViewSettingsDropDown();
         actionsOnFavoriteViewPage favorite = new actionsOnFavoriteViewPage(driver);
         favorite.clickingFavoriteButton();
-
+        view.openViewDropDown();
 
     }
 

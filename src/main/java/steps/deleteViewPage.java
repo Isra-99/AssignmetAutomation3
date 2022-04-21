@@ -20,6 +20,7 @@ public class deleteViewPage {
         actionsOnDeleteViewPage delete = new actionsOnDeleteViewPage(driver);
         delete.clickDeleteView();
         delete.clickOkToDelete();
+        view.openViewDropDown();
 
     }
 
